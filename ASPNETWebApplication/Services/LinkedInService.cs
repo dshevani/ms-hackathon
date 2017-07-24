@@ -10,8 +10,9 @@ namespace ASPNETWebApplication.Services
 {
     public class LinkedInService
     {
+        public static string redirectUrl = "http://localhost:3275/api/linkedin/oauth2";
 
-        private LinkedInApi linkedInAPI;
+        public LinkedInApi linkedInAPI;
 
         public LinkedInService()
         {
@@ -26,11 +27,8 @@ namespace ASPNETWebApplication.Services
         {
             var scope = AuthorizationScope.ReadBasicProfile | AuthorizationScope.ReadEmailAddress;
             var state = Guid.NewGuid().ToString();
-            var redirectUrl = "http://mywebsite/LinkedIn/OAuth2";
             return linkedInAPI.OAuth2.GetAuthorizationUrl(scope, state, redirectUrl);
         }
-
-
 
     }
 }
