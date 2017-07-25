@@ -58,15 +58,25 @@ if (window.location.href.indexOf("premium") > -1) {
     $(".purchase-restriction-modal footer form input[type='submit']").attr("value", "Submit");
 
     
-} else {
+} else if (window.location.href.indexOf("payments") > -1) {
 
+    $(".product-icon h1").html("Smart Career Manager");
+    $(".product-info p").html(name + ", we have created a plan to achieve your goal");
+    // Step 1 : Suggest courses
+    span = $(".step-header:eq(0) h2").html();
+    span = span.replace("Confirm your billing cycle", "Consider enrolling for these courses");
+    $(".step-header:eq(0) h2").html(span);
+
+}
+
+else {
 
     popUpModal = "\
-    <div id=\"career-manager\" class=\"ad-banner-container\"><h5>Check out our new </h5><h3>Smart Career Manager</h3> \
-       <br/><img class=\"vh-center__img\" src=\"https://static.licdn.com/scds/common/u/img/promo/ads/LinkedIn_Logo50x50.png\" alt=\"LinkedIn\"> <br\/> <br\/> \
-       <a href=\"https://www.linkedin.com/premium/learning?channel=LEARNING&amp;family=learning&amp;destRedirectURL=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fme%3Ftrk%3DprofileSelf_d_flagship3_profile_view_base_learningFeedm014%253Aa001_seeRecommendations_learning%26trk%3DprofileSelf_d_flagship3_profile_view_base_learningFeedm014%253Aa001_seeRecommendations_learning&amp;upsellTrk=lil_banner_hero_en_US_learning_upsell&amp;disablePromo=true&amp;lipi=urn%3Ali%3Apage%3Ad_learning_feed%3BZoYsObhaTwSTNVh5h0SUOg%3D%3D&amp;trk=profileSelf_d_flagship3_profile_view_base_learningFeedm014%3Aa001_seeRecommendations_learning\" id=\"ember1726\" class=\"upsell-action btn-primary btn-large ember-view\">Start my free month</a> \
-    </div> \
-    ";
+        <div id=\"career-manager\" class=\"ad-banner-container\"><h5>Check out our new </h5><h3>Smart Career Manager</h3> \
+           <br/><img class=\"vh-center__img\" src=\"https://static.licdn.com/scds/common/u/img/promo/ads/LinkedIn_Logo50x50.png\" alt=\"LinkedIn\"> <br\/> <br\/> \
+           <a href=\"https://www.linkedin.com/premium/learning?channel=LEARNING&amp;family=learning&amp;destRedirectURL=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fme%3Ftrk%3DprofileSelf_d_flagship3_profile_view_base_learningFeedm014%253Aa001_seeRecommendations_learning%26trk%3DprofileSelf_d_flagship3_profile_view_base_learningFeedm014%253Aa001_seeRecommendations_learning&amp;upsellTrk=lil_banner_hero_en_US_learning_upsell&amp;disablePromo=true&amp;lipi=urn%3Ali%3Apage%3Ad_learning_feed%3BZoYsObhaTwSTNVh5h0SUOg%3D%3D&amp;trk=profileSelf_d_flagship3_profile_view_base_learningFeedm014%3Aa001_seeRecommendations_learning\" id=\"ember1726\" class=\"upsell-action btn-primary btn-large ember-view\">Start my free month</a> \
+        </div> \
+        ";
 
     $(popUpModal).insertAfter(".pe-hub-section:eq(0)");
 }
