@@ -1,0 +1,25 @@
+#career-manager {
+    height: 200px;
+    width: 100%;
+    text-align: center;
+}
+
+#career-manager .btn-primary {
+    background-color: #0084bf;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    height: 32px;
+    overflow: hidden;
+    padding: 5px 16px;
+    position: relative;
+    text-align: center;
+    transition-duration: 167ms;
+    transition-property: background-color,box-shadow,color;
+    transition-timing-function: cubic-bezier(0,0,.2,1);
+    vertical-align: middle;
+    z-index: 0;
+}

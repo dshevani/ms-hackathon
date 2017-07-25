@@ -5,6 +5,29 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNETWebApplication", "ASPNETWebApplication\ASPNETWebApplication.csproj", "{45622307-3FE4-4B59-8F11-E82DD28B06E6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "extension", "extension", "{38509F70-19CB-459D-871C-89F4767DADA8}"
+	ProjectSection(SolutionItems) = preProject
+		extension\icon.png = extension\icon.png
+		extension\manifest.json = extension\manifest.json
+		extension\popup.html = extension\popup.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{E7F2E5F3-3B56-444F-AFB0-333B9AA58640}"
+	ProjectSection(SolutionItems) = preProject
+		extension\js\background.js = extension\js\background.js
+		extension\js\canvasjs.min.js = extension\js\canvasjs.min.js
+		extension\js\content.js = extension\js\content.js
+		extension\js\d3.v4.min.js = extension\js\d3.v4.min.js
+		extension\js\jquery-3.2.1.min.js = extension\js\jquery-3.2.1.min.js
+		scratchpad.html = scratchpad.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{1173E06F-5595-4BAF-B518-2D3C37C88A37}"
+	ProjectSection(SolutionItems) = preProject
+		extension\css\bootstrap.min.css = extension\css\bootstrap.min.css
+		extension\css\myown.css = extension\css\myown.css
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +41,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E7F2E5F3-3B56-444F-AFB0-333B9AA58640} = {38509F70-19CB-459D-871C-89F4767DADA8}
+		{1173E06F-5595-4BAF-B518-2D3C37C88A37} = {38509F70-19CB-459D-871C-89F4767DADA8}
 	EndGlobalSection
 EndGlobal

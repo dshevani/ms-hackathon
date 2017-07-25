@@ -23,7 +23,7 @@
   },
   "content_scripts": [
     {
-        "matches": ["http://www.linkedin.com/*", "https://www.linkedin.com/*"],
+        "matches": ["http://www.linkedin.com/*", "https://www.linkedin.com/*", "http://www.linkedin.com/premium/*", "https://www.linkedin.com/premium/*"],
         "js": ["js/canvasjs.min.js", "js/jquery-3.2.1.min.js", "js/content.js"],
         "css": ["css/bootstrap.min.css", "css/myown.css"]
     }
