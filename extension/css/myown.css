@@ -23,3 +23,10 @@
     vertical-align: middle;
     z-index: 0;
 }
+
+.form-inline {
+    padding:2px;
+}
+.form-inline > * {
+    margin:2px 3px !important;
+}

@@ -19,12 +19,12 @@
        "activeTab"
    ],
   "background": {
-    "scripts": ["js/jquery-3.2.1.min.js", "js/background.js"]
+    "scripts": ["js/jquery-1.10.2.min.js", "js/jquery-ui.min.js", "js/background.js"]
   },
   "content_scripts": [
     {
         "matches": ["http://www.linkedin.com/*", "https://www.linkedin.com/*", "http://www.linkedin.com/premium/*", "https://www.linkedin.com/premium/*"],
-        "js": ["js/canvasjs.min.js", "js/jquery-3.2.1.min.js", "js/content.js"],
+        "js": ["js/canvasjs.min.js", "js/jquery-1.10.2.min.js", "js/jquery-ui.min.js", "js/content.js"],
         "css": ["css/bootstrap.min.css", "css/myown.css"]
     }
   ]
