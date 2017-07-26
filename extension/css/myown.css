@@ -31,10 +31,14 @@
     margin:2px 3px !important;
 }
 
-.product-icon-new .learning {
-    background-color: #0084bf;
+.banner .product-icon .learning {
+    background-color: #0084bf !important;
 }
 
-.product-icon-new .learning {
-    background-color: #0084bf;
+.banner .product-icon .learning {
+    background-color: #0084bf !important;
+}
+
+header.learning>.step-number {
+    background-color: #0084bf !important; 
 }

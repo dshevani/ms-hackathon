@@ -24,7 +24,7 @@ if (window.location.href.indexOf("premium") > -1) {
                 <option selected>Choose designation...<\/option>\
                 <option value=\"1\">CTO<\/option>\
                 <option value=\"2\">CEO<\/option>\
-                <option value=\"3\">Manager<\/option>\
+                <option value=\"3\">Eng.Manager<\/option>\
               <\/select>\
               <label class=\"mr-sm-2\" for=\"inlineFormCustomSelect\">At<\/label>\
               <select class=\"custom-select mb-2 mr-sm-2 mb-sm-0\" id=\"inlineFormCustomSelect\">\
@@ -39,6 +39,8 @@ if (window.location.href.indexOf("premium") > -1) {
                 <option value=\"1\">Microsoft<\/option>\
                 <option value=\"2\">Amazon<\/option>\
                 <option value=\"3\">Google<\/option>\
+                <option value=\"4\">Facebook<\/option>\
+                <option value=\"5\">Yahoo<\/option>\
               <\/select>\
               <label class=\"mr-sm-2\" for=\"inlineFormCustomSelect\">In<\/label>\
               <select class=\"custom-select mb-2 mr-sm-2 mb-sm-0\" id=\"inlineFormCustomSelect\">\
@@ -65,10 +67,10 @@ if (window.location.href.indexOf("premium") > -1) {
     $(".product-card h2").html("LinkedIn Career Assistant");
     $(".product-card p:eq(0)").html("Take the courses recommended especially for you, get mentored by experts in your domain and you must be there.");
     $(".purchase-restriction-modal div[role='document']").attr("style", "width:1000px");
-    $(".purchase-restriction-modal header h1").html("Tell us about your goal, " + name);
+    $(".purchase-restriction-modal header h1").html("Tell us about your goals, " + name);
     $(".purchase-restriction-modal div[role='document'] div").html(fillDetais);
     $(".purchase-restriction-modal footer form input[type='submit']").attr("value", "Submit");
-
+    $('.purchase-restriction-modal footer button:first').text('Next');
     
 } else if (window.location.href.indexOf("payments") > -1) {
 
@@ -79,10 +81,10 @@ if (window.location.href.indexOf("premium") > -1) {
     $(".product-info p").html("Welcome, we have created a plan to achieve your goal");
     // Step 1 : Suggest courses
     span = $(".step-header:eq(0) h2").html();
-    span = span.replace("Confirm your billing cycle", "Consider enrolling for these courses");
+    span = span.replace("Confirm your billing cycle", "Enroll for these courses");
     $(".step-header:eq(0) h2").html(span);
-    $(".cart-chooser-container dl:eq(0) dt").html("<a href=\"https://www.linkedin.com/learning/jeff-weiner-on-establishing-a-culture-and-a-plan-for-scaling\">Establishing a Culture : Jeff Weiner</a>");
-    $(".cart-chooser-container dl:eq(1) dt").html("<a href=\"https://www.linkedin.com/learning/strategic-negotiation\">Strategic Negotiation</a>");
+    $(".cart-chooser-container dl:eq(0) dt").html("<a href=\"https://www.linkedin.com/learning/programming-foundations-web-services\">Designing Distributed Systems</a>");
+    $(".cart-chooser-container dl:eq(1) dt").html("<a href=\"https://www.linkedin.com/learning/strategic-negotiation\">Managing Smart Teams</a>");
     //$(".footnote-text").text("We recommend you take above courses and take the first step. Meanwhile, we will connect you with experts and mentors.");
     // Step 2 : Remove Order Summary
     $(".order-summary-container").html("<div>Note : We recommend you take above courses and take the first step. Meanwhile, we will connect you with experts and mentors</div>");
@@ -120,16 +122,16 @@ if (window.location.href.indexOf("premium") > -1) {
     following = "\
             <table>\
                 <tr>\
-                  <td width=\"150px\" align=\"center\"><img style=\"width:85px; height:95px;border-radius:35px;\"  src=\"https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAxNAAAAJDZlYzAyYTZhLTNiMTQtNDVjNC04MTY4LTY0N2E5ZjM3NThhYw.jpg\" class=\"avatar member EntityPhoto-circle-3\"></td>\
-                  <td width=\"150px\" align=\"center\"><img style=\"width:85px; height:95px;border-radius:35px;\"  src=\"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/2/000/1da/0e8/0778543.jpg\" class=\"avatar member EntityPhoto-circle-3\"></td>\
-                  <td width=\"150px\" align=\"center\"><img style=\"width:85px; height:95px;border-radius:35px;\"  src=\"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/000/068/0d2/067e2f6.jpg\" class=\"avatar member EntityPhoto-circle-3\"></td>\
-                  <td width=\"150px\" align=\"center\"><img style=\"width:85px; height:95px;border-radius:35px;\"  src=\"https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAwiAAAAJDhhM2MzODcwLWJjMmMtNDg0My1iN2FkLWVkY2ExM2JkOWQyMg.jpg\" class=\"avatar member EntityPhoto-circle-3\"></td>\
+                  <td width=\"150px\" align=\"center\"><img style=\"width:85px; height:95px;border-radius:35px;\"  src=\"https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAxJAAAAJGRkMjA5MjdhLTg1NmItNDdmOC04YzgzLTFlODRlNTYxZTM1ZQ.jpg\" class=\"avatar member EntityPhoto-circle-3\"></td>\
+                  <td width=\"150px\" align=\"center\"><img style=\"width:85px; height:95px;border-radius:35px;\"  src=\"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/000/0de/37d/10829b2.jpg\" class=\"avatar member EntityPhoto-circle-3\"></td>\
+                  <td width=\"150px\" align=\"center\"><img style=\"width:85px; height:95px;border-radius:35px;\"  src=\"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/07c/31e/153cdd3.jpg\" class=\"avatar member EntityPhoto-circle-3\"></td>\
+                  <td width=\"150px\" align=\"center\"><img style=\"width:85px; height:95px;border-radius:35px;\"  src=\"https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAJaAAAAJGRjMmNlNmM0LTIzMzItNDRlZS1hMGQ4LWEwMmMwN2M5NzllMg.jpg\" class=\"avatar member EntityPhoto-circle-3\"></td>\
                 </tr>\
                 <tr>\
-                  <td width=\"150px\" align=\"center\"><span class=\"feed-s-follows-module-recommendation__name Sans-15px-black-85%-semibold\"><a href=\"https://www.linkedin.com/in/shreyas-ganesh-n-2569695\">Shreyas Ganesh N</a><br/>Product Manager at Microsoft</span></td>\
-                  <td width=\"150px\" align=\"center\"><span class=\"feed-s-follows-module-recommendation__name Sans-15px-black-85%-semibold\"><a href=\"https://www.linkedin.com/in/deepakshevani/\">Deepak Shevani</a><br/>Software Engineer at Microsoft</span></td>\
-                  <td width=\"200px\" align=\"center\"><span class=\"feed-s-follows-module-recommendation__name Sans-15px-black-85%-semibold\"><a href=\"https://www.linkedin.com/in/kbangalore\">Kiran Bangalore</a><br/>Principal Engineering Manager at Microsoft</span></td>\
-                  <td width=\"200px\" align=\"center\"><span class=\"feed-s-follows-module-recommendation__name Sans-15px-black-85%-semibold\"><a href=\"https://www.linkedin.com/in/venkatasubramaniam\">Venkata Subramaniam</a><br/>Senior Software Engineering Lead at Microsoft</span></td>\
+                  <td width=\"150px\" align=\"center\"><span class=\"feed-s-follows-module-recommendation__name Sans-15px-black-85%-semibold\"><a href=\"https://www.linkedin.com/in/jkevinscott\">Kevin Scott</a><br/>CTO Microsoft</span></td>\
+                  <td width=\"150px\" align=\"center\"><span class=\"feed-s-follows-module-recommendation__name Sans-15px-black-85%-semibold\"><a href=\"https://www.linkedin.com/in/jeromycarriere\">Jeromy Carriere</a><br/>Engineering Director at Google</span></td>\
+                  <td width=\"200px\" align=\"center\"><span class=\"feed-s-follows-module-recommendation__name Sans-15px-black-85%-semibold\"><a href=\"https://www.linkedin.com/in/kbangalore\">Jeff Weiner</a><br/>CEO at LinkedIn</span></td>\
+                  <td width=\"200px\" align=\"center\"><span class=\"feed-s-follows-module-recommendation__name Sans-15px-black-85%-semibold\"><a href=\"https://www.linkedin.com/in/satya-nadella-3145136\">Satya Nadella</a><br/>CEO at Microsoft</span></td>\
                 </tr>\
                 <tr>\
                   <td width=\"150px\" align=\"center\"><button id=\"place-order\" type=\"button\" data-tracking-control-name=\"place_order\">Follow</button></td>\
