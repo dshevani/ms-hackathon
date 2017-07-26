@@ -72,7 +72,10 @@ if (window.location.href.indexOf("premium") > -1) {
     
 } else if (window.location.href.indexOf("payments") > -1) {
 
+    $(".product-icon").addClass("product-icon-new");
+    $(".product-icon").removeClass("product-icon-new");
     $(".product-icon h1").html("Smart Career Manager");
+    $(".secure-xo").html("Smart Career Manager");
     $(".product-info p").html("Welcome, we have created a plan to achieve your goal");
     // Step 1 : Suggest courses
     span = $(".step-header:eq(0) h2").html();
@@ -80,30 +83,65 @@ if (window.location.href.indexOf("premium") > -1) {
     $(".step-header:eq(0) h2").html(span);
     $(".cart-chooser-container dl:eq(0) dt").html("<a href=\"https://www.linkedin.com/learning/jeff-weiner-on-establishing-a-culture-and-a-plan-for-scaling\">Establishing a Culture : Jeff Weiner</a>");
     $(".cart-chooser-container dl:eq(1) dt").html("<a href=\"https://www.linkedin.com/learning/strategic-negotiation\">Strategic Negotiation</a>");
-    $(".footnote-text").text("We recommend you take above courses and take the first step. Meanwhile, we will connect you with experts and mentors.");
-    // Step 2 : Suggest mentors
+    //$(".footnote-text").text("We recommend you take above courses and take the first step. Meanwhile, we will connect you with experts and mentors.");
+    // Step 2 : Remove Order Summary
+    $(".order-summary-container").html("<div>Note : We recommend you take above courses and take the first step. Meanwhile, we will connect you with experts and mentors</div>");
+    // Step 3 : Suggest mentors
     span = $(".step-header:eq(1) h2").html();
     span = span.replace("Payment", "Get guidance from expert mentors");
     $(".step-header:eq(1) h2").html(span);
+    // Step 4 : Follow People
+    span = $(".step-header:eq(2) h2").html();
+    span = span.replace("Review your order", "Follow these awesome people");
+    $(".step-header:eq(2) h2").html(span);
+    // Step 5 : Generate Roadmap Button
+    $("<div><button id=\"place-order\" type=\"button\" data-tracking-control-name=\"place_order\">Generate RoadMap</button>").insertAfter(".review");
     recommendations = "\
             <table>\
                 <tr>\
-                  <td><img style=\"width:130px; height:140px;border-radius:35px;\"  src=\"https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAxNAAAAJDZlYzAyYTZhLTNiMTQtNDVjNC04MTY4LTY0N2E5ZjM3NThhYw.jpg\" class=\"avatar member EntityPhoto-circle-3\"></td>\
-                  <td>&nbsp; &nbsp;</td>\
-                  <td><span class=\"feed-s-follows-module-recommendation__name Sans-15px-black-85%-semibold\"><a href=\"https://www.linkedin.com/in/shreyas-ganesh-n-2569695\">Shreyas Ganesh N</a></span></td>\
-                  <td>&nbsp; &nbsp;</td>\
-                  <td><button id=\"place-order\" type=\"button\" data-tracking-control-name=\"place_order\">Request Mentorship</button></td>\
+                  <td width=\"200px\" align=\"center\"><img style=\"width:130px; height:135px;border-radius:35px;\"  src=\"https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAz6AAAAJDIzYTQyN2RjLTk5MWYtNDYyYS1hMzJjLWQ3N2U3YzAxNmU1Yg.jpg\" class=\"avatar member EntityPhoto-circle-3\"></td>\
+                  <td width=\"200px\" align=\"center\"><img style=\"width:130px; height:135px;border-radius:35px;\"  src=\"https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAALoAAAAJDNkYjQyYThlLWJiZjMtNGNjZi04YzIzLWJkNmEyYmI4ZmFiZQ.jpg\" class=\"avatar member EntityPhoto-circle-3\"></td>\
+                  <td width=\"200px\" align=\"center\"><img style=\"width:130px; height:135px;border-radius:35px;\"  src=\"https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAh0AAAAJGRlMDAyNGMzLTNmMDgtNGQ1Yy1iMDI3LWU3NjdiOWQxMzc5Mg.jpg\" class=\"avatar member EntityPhoto-circle-3\"></td>\
                 </tr>\
                 <tr>\
-                  <td><img style=\"width:130px; height:140px;border-radius:35px;\"  src=\"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/000/068/0d2/067e2f6.jpg\" class=\"avatar member EntityPhoto-circle-3\"></td>\
-                  <td>&nbsp; &nbsp;</td>\
-                  <td><span class=\"feed-s-follows-module-recommendation__name Sans-15px-black-85%-semibold\"><a href=\"https://www.linkedin.com/in/kbangalore\">Kiran Bangalore</a></span></td>\
-                  <td>&nbsp; &nbsp;</td>\
-                  <td><button id=\"place-order\" type=\"button\" data-tracking-control-name=\"place_order\">Request Mentorship</button></td>\
+                  <td width=\"200px\" align=\"center\"><span class=\"feed-s-follows-module-recommendation__name Sans-15px-black-85%-semibold\"><a href=\"https://www.linkedin.com/in/guptaankur\">Ankur Gupta</a><br/>Principal Development Manager at Microsoft</span></td>\
+                  <td width=\"200px\" align=\"center\"><span class=\"feed-s-follows-module-recommendation__name Sans-15px-black-85%-semibold\"><a href=\"https://www.linkedin.com/in/sambavi\">Sambavi Muthukrishnan</a><br/>Engineering Manager at Facebook</span></td>\
+<td width=\"200px\" align=\"center\"><span class=\"feed-s-follows-module-recommendation__name Sans-15px-black-85%-semibold\"><a href=\"https://www.linkedin.com/in/sachin-kulkarni-9a36364\">Sachin Kulkarni</a><br/>Director of Engineering at Facebook</span></td>\
+                </tr>\
+                <tr>\
+                  <td width=\"200px\" align=\"center\"><button id=\"place-order\" type=\"button\" data-tracking-control-name=\"place_order\">Request Mentorship</button></td>\
+                  <td width=\"200px\" align=\"center\"><button id=\"place-order\" type=\"button\" data-tracking-control-name=\"place_order\">Request Mentorship</button></td>\
+<td width=\"200px\" align=\"center\"><button id=\"place-order\" type=\"button\" data-tracking-control-name=\"place_order\">Request Mentorship</button></td>\
                 </tr>\
             </table>\
     ";
     $(".payment-method-display").html(recommendations);
+    
+    following = "\
+            <table>\
+                <tr>\
+                  <td width=\"150px\" align=\"center\"><img style=\"width:85px; height:95px;border-radius:35px;\"  src=\"https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAxNAAAAJDZlYzAyYTZhLTNiMTQtNDVjNC04MTY4LTY0N2E5ZjM3NThhYw.jpg\" class=\"avatar member EntityPhoto-circle-3\"></td>\
+                  <td width=\"150px\" align=\"center\"><img style=\"width:85px; height:95px;border-radius:35px;\"  src=\"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/2/000/1da/0e8/0778543.jpg\" class=\"avatar member EntityPhoto-circle-3\"></td>\
+                  <td width=\"150px\" align=\"center\"><img style=\"width:85px; height:95px;border-radius:35px;\"  src=\"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/000/068/0d2/067e2f6.jpg\" class=\"avatar member EntityPhoto-circle-3\"></td>\
+                  <td width=\"150px\" align=\"center\"><img style=\"width:85px; height:95px;border-radius:35px;\"  src=\"https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAwiAAAAJDhhM2MzODcwLWJjMmMtNDg0My1iN2FkLWVkY2ExM2JkOWQyMg.jpg\" class=\"avatar member EntityPhoto-circle-3\"></td>\
+                </tr>\
+                <tr>\
+                  <td width=\"150px\" align=\"center\"><span class=\"feed-s-follows-module-recommendation__name Sans-15px-black-85%-semibold\"><a href=\"https://www.linkedin.com/in/shreyas-ganesh-n-2569695\">Shreyas Ganesh N</a><br/>Product Manager at Microsoft</span></td>\
+                  <td width=\"150px\" align=\"center\"><span class=\"feed-s-follows-module-recommendation__name Sans-15px-black-85%-semibold\"><a href=\"https://www.linkedin.com/in/deepakshevani/\">Deepak Shevani</a><br/>Software Engineer at Microsoft</span></td>\
+                  <td width=\"200px\" align=\"center\"><span class=\"feed-s-follows-module-recommendation__name Sans-15px-black-85%-semibold\"><a href=\"https://www.linkedin.com/in/kbangalore\">Kiran Bangalore</a><br/>Principal Engineering Manager at Microsoft</span></td>\
+                  <td width=\"200px\" align=\"center\"><span class=\"feed-s-follows-module-recommendation__name Sans-15px-black-85%-semibold\"><a href=\"https://www.linkedin.com/in/venkatasubramaniam\">Venkata Subramaniam</a><br/>Senior Software Engineering Lead at Microsoft</span></td>\
+                </tr>\
+                <tr>\
+                  <td width=\"150px\" align=\"center\"><button id=\"place-order\" type=\"button\" data-tracking-control-name=\"place_order\">Follow</button></td>\
+                  <td width=\"150px\" align=\"center\"><button id=\"place-order\" type=\"button\" data-tracking-control-name=\"place_order\">Follow</button></td>\
+                  <td width=\"200px\" align=\"center\"><button id=\"place-order\" type=\"button\" data-tracking-control-name=\"place_order\">Follow</button></td>\
+                  <td width=\"200px\" align=\"center\"><button id=\"place-order\" type=\"button\" data-tracking-control-name=\"place_order\">Follow</button></td>\
+                </tr>\
+            </table>\
+    ";
+
+    $(".review-container").html(following);
+
 }
 
 else {

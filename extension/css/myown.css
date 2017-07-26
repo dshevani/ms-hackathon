@@ -31,6 +31,10 @@
     margin:2px 3px !important;
 }
 
-.product-icon.learning {
+.product-icon-new .learning {
+    background-color: #0084bf;
+}
+
+.product-icon-new .learning {
     background-color: #0084bf;
 }
