@@ -18,7 +18,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{E7F2E5F3-3B56-
 		extension\js\canvasjs.min.js = extension\js\canvasjs.min.js
 		extension\js\content.js = extension\js\content.js
 		extension\js\d3.v4.min.js = extension\js\d3.v4.min.js
+		extension\js\jquery-1.10.2.min.js = extension\js\jquery-1.10.2.min.js
 		extension\js\jquery-3.2.1.min.js = extension\js\jquery-3.2.1.min.js
+		extension\js\jquery-ui.min.js = extension\js\jquery-ui.min.js
 		scratchpad.html = scratchpad.html
 	EndProjectSection
 EndProject
