@@ -74,8 +74,6 @@ if (window.location.href.indexOf("premium") > -1) {
     
 } else if (window.location.href.indexOf("payments") > -1) {
 
-    $(".product-icon").addClass("product-icon-new");
-    $(".product-icon").removeClass("product-icon-new");
     $(".product-icon h1").html("Smart Career Manager");
     $(".secure-xo").html("Smart Career Manager");
     $(".product-info p").html("Welcome, we have created a plan to achieve your goal");
